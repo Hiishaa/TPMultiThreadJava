@@ -8,8 +8,15 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-        ThreadMatch thread = new ThreadMatch("Lyon", "Marseille");
-        thread.run();
+        ThreadMatch thread1 = new ThreadMatch("Lyon", "Marseille");
+        ThreadMatch thread2 = new ThreadMatch("Saint-Etienne", "Lyon");
+        ThreadMatch thread3 = new ThreadMatch("Marseille", "Saint-Etienne");
+        Thread t1 = new Thread(thread1);
+        Thread t2 = new Thread(thread2);
+        Thread t3 = new Thread(thread3);
+        t1.start();
+        t2.start();
+        t3.start();
+
     }
 }
