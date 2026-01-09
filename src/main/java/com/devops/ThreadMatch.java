@@ -12,7 +12,10 @@ public class ThreadMatch implements Runnable{
 
     @Override
     public void run(){
-        while(true){
+
+            for(int i = 0; i < 2; i++ )
+            {
+           System.out.println("Début du match : " + this.equipe1 + " - " + this.equipe2);
            String comment = CommentGenerator.getRandomComment();
            System.out.println(comment);
            try{
